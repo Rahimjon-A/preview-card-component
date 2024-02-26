@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    font-family: "Outfit", sans-serif;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    --very-dark-blue-main: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    background: var(--very-dark-blue-main);
+}
+
+.container {
+    max-width: 1440px;
+    padding: 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card__holder {
+    max-width: 18rem;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    background: var(--very-dark-blue-card);
+    cursor: pointer;
+    box-shadow: 1rem 2rem 0 rgb(12, 23, 41), -1rem 2rem 0 rgb(12, 23, 41);
+}
+
+
+
+.img__holder {
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+
+
+
+
+
+.view {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.img__holder:hover .view {
+    opacity: 1;
+}
+
+.img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: var(--fw-600);
+    margin-bottom: 1rem;
+    transition: all 0.5s ease;
+}
+
+.title:hover {
+    color: var(--cyan);
+}
+
+.info {
+    color: var(--soft-blue);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: var(--fw-300);
+}
+
+.eth {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.2rem;
+    border-bottom: solid 0.01rem var(--soft-blue);
+}
+
+.eth__price {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.eth .price {
+    color: var(--cyan);
+    font-weight: var(--fw-400);
+}
+
+.user__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding-block: 0.8rem;
+}
+
+.user__img {
+    border-radius: 50%;
+    border: solid 2px #fff;
+    margin-right: 0.5rem;
+}
+
+.name {
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.name:hover {
+    color: var(--cyan);
+}
